@@ -1,0 +1,23 @@
+{
+  "name": "api-server-node-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaidasim2197/api-server-node-JS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zaidasim2197/api-server-node-JS/issues"
+  },
+  "homepage": "https://github.com/zaidasim2197/api-server-node-JS#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
