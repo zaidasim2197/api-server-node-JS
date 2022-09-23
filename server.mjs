@@ -2,11 +2,27 @@ import express from 'express'
 const app = express()
 const port = process.env.PORT || 3000;
 
-app.get('/', (req, res) => {
-    console.log("Hello World From Zaid Computer" )
-  res.send('Hello World From Zaid Computer!')
-  res.links({
-    Github: 'https://github.com/zaidasim2197'})
+let todos=[];
+
+app.use(express.json{})
+app.post('/todo', (req, res) => {
+   todos.push( req.body.text);
+  res.send({
+    message: "Your Todo is saved;",
+    data: todos
+  })
+})
+
+app.get('/todos', (req, res) => {
+    
+  res.send({
+    message: "Here is your todo List",
+    data:todos
+  })
+})
+app.get('/water', (req, res) => {
+    console.log("Here is your water" )
+  res.send('Here is your water')
 })
 
 app.listen(port, () => {
